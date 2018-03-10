@@ -163,12 +163,14 @@ exports.playCmd = rl => {
      	 		
      	 		if(answer.trim().toLowerCase() == quiz.answer.trim().toLowerCase()) {
      	 			score = score+1;
+     	 			log(`correcto`);
      	 			log(`CORRECTO - Lleva ${score} aciertos.`);
      	 			
      	 			
      	 			//biglog(score, 'green');
      	 			playOne();
      	 		} else {
+     	 			log(`incorrecto`);
      	 			log('INCORRECTO.', );
      	 			log(`Final del juego. Aciertos: ${score}`);
 
