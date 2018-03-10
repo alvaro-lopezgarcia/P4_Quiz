@@ -103,7 +103,7 @@ exports.testCmd = (rl, id) => {
 			const quiz = model.getByIndex(id);
 
 			rl.question(quiz.question, answer => {
-				const sinEspacios = respuesta.match(/[a-zñáéíóúA-Z0-9_]+/ig);
+				//const sinEspacios = respuesta.match(/[a-zñáéíóúA-Z0-9_]+/ig);
 				if (answer.trim().toLowerCase() === quiz.answer.trim().toLowerCase()) {
 					log('Su respuesta es correcta.', 'green');
 					biglog('Correcta', 'green');
@@ -159,7 +159,7 @@ exports.playCmd = rl => {
      	 	preguntas.splice(id,1);
      	 	const quiz = model.getByIndex(posicion);
      	 	rl.question(quiz.question, answer => {
-     	 	const sinEspacios = respuesta.match(/[a-zñáéíóúA-Z0-9_]+/ig);
+     	 	//const sinEspacios = respuesta.match(/[a-zñáéíóúA-Z0-9_]+/ig);
      	 		
      	 		if(answer.trim().toLowerCase() == quiz.answer.trim().toLowerCase()) {
      	 			score = score+1;
@@ -169,7 +169,7 @@ exports.playCmd = rl => {
      	 			//biglog(score, 'green');
      	 			playOne();
      	 		} else {
-     	 			log('INCORRECTO.');
+     	 			log('INCORRECTO.', );
      	 			log(`Final del juego. Aciertos: ${score}`);
 
      	 			biglog(score, 'green');
