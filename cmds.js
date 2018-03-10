@@ -164,11 +164,11 @@ exports.playCmd = rl => {
      	 			log(`CORRECTO - Lleva ${score} aciertos.`);
      	 			
      	 			
-     	 			biglog(score, 'green');
+     	 			//biglog(score, 'green');
      	 			playOne();
      	 		} else {
      	 			log('INCORRECTO.', 'red');
-     	 			log(`Final del juego. Aciertos: ${score}`, 'red');
+     	 			log(`Final del juego. Aciertos: ${score}`);
 
      	 			biglog(score, 'green');
      	 			rl.prompt();
