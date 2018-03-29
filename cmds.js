@@ -259,7 +259,7 @@ exports.playCmd = (socket, rl) => {
 };
  
 
-exports.creditsCmd =  rl => {
+exports.creditsCmd =  (socket,rl) => {
          log(socket, 'Autores de la práctica:');
          log(socket, 'Alvaro', 'green');
          rl.prompt();
